@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="dropDownSearchDialogViewModel"
+            type="com.library.dialogutils.searchdialog.SearchDialogViewModel" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_search_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        tools:context=".DropDownSearchDialogFragment">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_drop_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:behavior_hideable="true"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="@dimen/card_elevation_max"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="false"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            app:shapeAppearanceOverlay="@style/DropDownBottomSheetCardShape">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingVertical="@dimen/padding_medium">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputEdt_drop_down_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_large"
+                    android:layout_marginVertical="@dimen/margin_small"
+                    android:background="@drawable/background_search_drop_down"
+                    android:drawableEnd="@drawable/ic_round_search_24"
+                    android:hint="Search"
+                    android:paddingHorizontal="@dimen/padding_large"
+                    android:paddingVertical="@dimen/padding_medium"
+                    android:text="@={dropDownSearchDialogViewModel.searchText}" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_drop_down"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_below="@id/inputEdt_drop_down_search"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:scrollbars="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

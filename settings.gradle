@@ -1,0 +1,4 @@
+rootProject.name = "My Weather"
+include ':app'
+include ':dialogutils'
+

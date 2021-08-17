@@ -1,0 +1,138 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="DropDownBottomSheetCardShape" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeTopRight">10dp</item>
+        <item name="cornerSizeTopLeft">10dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+
+    <style name="FullScreenSearchDialog" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="actionMenuTextColor">@color/colorPrimary</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="BottomSheetModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_background</item>
+    </style>
+
+    <style name="BottomSheetStyle.EditText" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetModalStyle</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <!--    user this for light navigation bar
+                <item name="android:windowSoftInputMode">adjustResize</item>
+                <item name="android:windowIsFloating">false</item>
+                <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+                <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+                <item name="android:statusBarColor">@android:color/transparent</item>-->
+    </style>
+
+
+     <style name="Header5TextStyle">
+        <item name="android:textSize">@dimen/text_h5</item>
+        <item name="android:textColor">@color/textColor_highEmphasis</item>
+    </style>
+
+    <style name="Header5TextStyle.Bold" parent="Header5TextStyle">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Header4TextStyle">
+        <item name="android:textSize">@dimen/text_h4</item>
+        <item name="android:textColor">@color/textColor_highEmphasis</item>
+    </style>
+
+    <style name="Header3TextStyle">
+        <item name="android:textSize">@dimen/text_h3</item>
+        <item name="android:textColor">@color/textColor_highEmphasis</item>
+    </style>
+
+
+    <style name="Header3TextStyle.Bold" parent="Header3TextStyle">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="Header2TextStyle">
+        <item name="android:textSize">@dimen/text_h3</item>
+        <item name="android:textColor">@color/textColor_highEmphasis</item>
+    </style>
+
+    <style name="Header1TextStyle">
+        <item name="android:textSize">@dimen/text_h1</item>
+        <item name="android:textColor">@color/textColor_highEmphasis</item>
+    </style>
+
+
+    <style name="Header1TextStyle.Bold" parent="Header1TextStyle">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Header2TextStyle.Bold" parent="Header2TextStyle">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TitleTextStyle">
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:textColor">@color/textColor_highEmphasis</item>
+    </style>
+
+    <style name="TitleTextStyle.Bold" parent="TitleTextStyle">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="SubTitleTextStyle">
+        <item name="android:textSize">@dimen/text_sub_title</item>
+        <item name="android:textColor">@color/textColor_mediumEmphasis</item>
+    </style>
+
+
+    <style name="SubTitleTextStyle.Bold" parent="SubTitleTextStyle">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="SmallTextStyle.Italic" parent="SmallTextStyle">
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="SmallTextStyle">
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:textColor">@color/textColor_mediumEmphasis</item>
+    </style>
+
+
+    <style name="BottomSheetDialog" parent="@style/Theme.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="BottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <!--<item name="shapeAppearanceOverlay">@style/AppTheme.BottomSheetShape</item>-->
+        <item name="backgroundTint">@color/white</item>
+    </style>
+    
+</resources>

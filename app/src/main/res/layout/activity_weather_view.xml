@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mainviewmodel"
+            type="com.manohar.myweather.framework.ui.weather_screen.WeatherViewModel" />
+
+        <import type="android.view.View"/>
+
+
+
+    </data>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".framework.ui.weather_screen.WeatherView">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:background="@android:color/darker_gray"
+        android:layout_height="60dp"
+        android:gravity="start|center"
+        android:paddingStart="15sp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:text="Weather Today"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:layout_margin="15sp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="10dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dob_TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxStrokeColor="#FFF"
+            app:boxBackgroundColor="#FFF"
+            android:hint="Enter City"
+            app:errorTextColor="@color/red_600"
+            app:hintEnabled="true"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circular"
+                android:text="@={mainviewmodel.city}"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/show_res"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:layout_marginStart="15sp"
+        android:layout_marginEnd="15sp"
+        android:layout_marginBottom="20dp"
+        app:cornerRadius="10sp"
+        android:layout_gravity="center"
+        android:text="Show Results"
+        android:backgroundTint="@android:color/darker_gray"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginStart="15sp"
+        android:layout_marginEnd="15sp"
+        android:textColor="@color/black"
+        android:text="@{mainviewmodel.temp_c}"
+        android:id="@+id/temp_in_centigrade"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginStart="15sp"
+        android:layout_marginEnd="15sp"
+        android:textColor="@color/black"
+        android:text="@{mainviewmodel.temp_f}"
+        android:id="@+id/temp_in_fahrenheit"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="15sp"
+        android:layout_marginEnd="15sp"
+        android:text="@{mainviewmodel.lat}"
+        android:id="@+id/latitude"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginStart="15sp"
+        android:textColor="@color/black"
+        android:text="@{mainviewmodel.lon}"
+        android:layout_marginEnd="15sp"
+        android:id="@+id/longitude"/>
+
+
+
+</LinearLayout>
+</layout>
